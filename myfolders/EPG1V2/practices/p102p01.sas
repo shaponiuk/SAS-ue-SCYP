@@ -10,8 +10,11 @@
 *       and the results.                                  *;
 ***********************************************************;
 
-proc import ;
+proc import datafile="/folders/myfolders/EPG1V2/data/eu_sport_trade.xlsx"
+			dbms=xlsx
+			out=eu_sport_trade
+			replace;
 run;
 
-proc contents data= ;
+proc contents data=eu_sport_trade;
 run;
